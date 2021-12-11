@@ -1,0 +1,147 @@
+/*Variables*/
+:root {
+  --main-color: #353a5f;
+  --secondary-color: #9ebaf3;
+  --transparent-color: rgba(53, 58, 95, 0.7);
+  --section-padding: 100px;
+}
+
+/*End Variables*/
+/*Start Global Rules*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(to left, var(--secondary-color),var(--main-color));
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*Small Screen*/
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+
+/*Medium Screen*/
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+
+/*Large Screen*/
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+/*End Global Rules*/
+/*Start Shows*/
+
+.anime {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.anime h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid var(--main-color);
+  color: #40276e;
+  padding-bottom: 15px;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.anime .anime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+  grid-gap: 10px;
+}
+
+.anime .anime-container .anime-box {
+  padding: 20px 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.anime .anime-container .anime-box img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.anime .anime-container .anime-box .caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.anime .anime-container .anime-box:hover {
+  transform: translateY(-30px);
+}
+
+.anime .anime-container .anime-box:hover .caption {
+  opacity: 1;
+}
+
+.anime .anime-container .anime-box .caption .rate {
+  margin-top: 5px;
+}
+
+.anime .anime-container .anime-box .caption .rate i {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.anime .anime-container .anime-box .caption .rate p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.anime .anime-container .anime-box .caption .info {
+  margin-left: 10px;
+  text-align: right;
+}
+
+.anime .anime-container .anime-box .caption .info h4 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.anime .anime-container .anime-box .caption .info p {
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+}

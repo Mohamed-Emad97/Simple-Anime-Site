@@ -1,0 +1,120 @@
+/*Variables*/
+:root {
+  --main-color: #353a5f;
+  --secondary-color: #9ebaf3;
+  --transparent-color: rgba(53, 58, 95, 0.7);
+  --section-padding: 100px;
+}
+
+/*End Variables*/
+/*Start Global Rules*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(to left, var(--secondary-color),var(--main-color));
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*Small Screen*/
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+
+/*Medium Screen*/
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+
+/*Large Screen*/
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+/*End Global Rules*/
+/*Start Category*/
+
+.category {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.category h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid var(--main-color);
+  color: #40276e;
+  padding-bottom: 15px;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.category .cate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.category .cate-container .cate-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.category .cate-container .cate-box:hover .caption {
+  bottom: 20px;
+}
+
+.category .cate-container .cate-box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.category .cate-container .cate-box img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.category .cate-container .cate-box .caption {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  background-color: white;
+  color: grey;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.category .cate-container .cate-box .caption h4 {
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10px;
+}
