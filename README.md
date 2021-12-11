@@ -4,9 +4,9 @@ Responsive Design
 
 ## The Libary I Used In Design
 
- Normallized
- Font Awesome 
- Google Fonts
+1. Normallized
+2. Font Awesome 
+3. Google Fonts
 
 ## The Video Source
  From Youtube Channel The Link
